@@ -1,0 +1,1754 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <base target="_top">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+<style>
+
+/* =========================
+   BODY
+========================= */
+
+body{
+  background:#eef2f7;
+  font-family:Arial,sans-serif;
+  margin:0;
+  padding:0;
+}
+
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container{
+  max-width:1250px;
+  margin:auto;
+  padding:8px;
+}
+
+
+/* =========================
+   BOX
+========================= */
+
+.box{
+  background:#fff;
+  padding:12px;
+  margin-top:12px;
+  border-radius:14px;
+  box-shadow:0 2px 10px rgba(0,0,0,0.08);
+}
+
+
+/* =========================
+   TOP BUTTONS
+========================= */
+
+.topBtns{
+  display:flex;
+  gap:8px;
+  margin-top:10px;
+}
+
+.topBtns button{
+  flex:1;
+  border-radius:10px !important;
+  font-weight:600;
+  padding:11px !important;
+}
+
+
+/* =========================
+   TABLE RESPONSIVE
+========================= */
+
+.table-responsive{
+  overflow-x:auto;
+  border-radius:12px;
+}
+
+
+/* =========================
+   MAIN TABLE DESIGN
+========================= */
+
+#homePanel .customTable{
+
+  width:100%;
+  min-width:1100px;
+
+  border-collapse:collapse;
+
+  font-family:'Segoe UI',Arial,sans-serif;
+
+  background:#fff;
+
+}
+
+
+/* HEADER */
+
+#homePanel .customTable thead th{
+
+  background:linear-gradient(45deg,#2563eb,#4f46e5);
+
+  color:#fff;
+
+  padding:4px 6px;
+
+  font-size:15px;
+
+  font-weight:600;
+
+  text-align:center;
+
+  border:1px solid #444;
+
+  white-space:nowrap;
+
+}
+
+
+/* HEADER ROUND */
+
+#homePanel .customTable thead th:first-child{
+  border-top-left-radius:10px;
+}
+
+#homePanel .customTable thead th:last-child{
+  border-top-right-radius:10px;
+}
+
+
+/* BODY CELL */
+
+#homePanel .customTable tbody td{
+
+  padding:4px;
+
+  font-size:14px;
+
+  border:1px solid #555;
+
+  white-space:nowrap;
+
+  overflow:hidden;
+
+  text-overflow:ellipsis;
+
+  background:#fff;
+
+  vertical-align:middle;
+
+}
+
+
+/* ROW COLOR */
+
+
+/* ODD ROW */
+
+#homePanel .customTable tbody tr:nth-child(odd) td{
+
+  /* background:#e5e7eb; */
+
+}
+
+
+/* EVEN ROW */
+
+#homePanel .customTable tbody tr:nth-child(even) td{
+
+  /* background:#f3f7ff; */
+
+}
+
+
+
+/* HOVER */
+
+#homePanel .customTable tbody tr:hover td{
+  background:#90EE90;
+}
+
+
+/* SELECT ROW */
+
+#homePanel .customTable tbody tr.selectedRow td{
+  background:#90EE90 !important;
+}
+
+#homePanel .customTable tbody tr.selectedRow td:first-child{
+  border-left:4px solid #2563eb !important;
+}
+
+
+/* CENTER COLUMN */
+
+#homePanel .customTable td:nth-child(1),
+#homePanel .customTable td:nth-child(2),
+#homePanel .customTable td:nth-child(6),
+#homePanel .customTable td:nth-child(8),
+#homePanel .customTable td:nth-child(9),
+#homePanel .customTable td:nth-child(10){
+
+  text-align:center;
+
+}
+
+
+/* =========================
+   COLUMN WIDTH
+========================= */
+
+#homePanel .customTable th:nth-child(1),
+#homePanel .customTable td:nth-child(1){
+  min-width:80px;
+  max-width:80px;
+}
+
+#homePanel .customTable th:nth-child(2),
+#homePanel .customTable td:nth-child(2){
+  min-width:80px;
+  max-width:80px;
+}
+
+#homePanel .customTable th:nth-child(3),
+#homePanel .customTable td:nth-child(3){
+  min-width:90px;
+  max-width:90px;
+}
+
+#homePanel .customTable th:nth-child(4),
+#homePanel .customTable td:nth-child(4){
+  min-width:260px;
+  max-width:260px;
+}
+
+#homePanel .customTable th:nth-child(5),
+#homePanel .customTable td:nth-child(5){
+  min-width:150px;
+  max-width:150px;
+}
+
+#homePanel .customTable th:nth-child(6),
+#homePanel .customTable td:nth-child(6){
+  min-width:90px;
+  max-width:90px;
+}
+
+#homePanel .customTable th:nth-child(7),
+#homePanel .customTable td:nth-child(7){
+  min-width:260px;
+  max-width:260px;
+}
+
+#homePanel .customTable th:nth-child(8),
+#homePanel .customTable td:nth-child(8),
+
+#homePanel .customTable th:nth-child(9),
+#homePanel .customTable td:nth-child(9),
+
+#homePanel .customTable th:nth-child(10),
+#homePanel .customTable td:nth-child(10){
+
+  min-width:60px;
+  max-width:60px;
+
+}
+
+
+#homePanel .customTable th:nth-child(11),
+#homePanel .customTable td:nth-child(11){
+
+  min-width:70px;
+  max-width:70px;
+  text-align:center;
+
+}
+
+#homePanel .customTable th:nth-child(12),
+#homePanel .customTable td:nth-child(12){
+
+  text-align:center;
+
+}
+
+
+/* =========================
+   STATUS
+========================= */
+
+.statusPending{
+  background:#fff3cd;
+  color:#856404;
+  padding:4px 9px;
+  border-radius:20px;
+  font-size:11px;
+  font-weight:bold;
+}
+
+.statusClosed{
+  background:#f8d7da;
+  color:#842029;
+  padding:4px 9px;
+  border-radius:20px;
+  font-size:11px;
+  font-weight:bold;
+}
+
+.statusApprove{
+  background:#d1e7dd;
+  color:#0f5132;
+  padding:4px 9px;
+  border-radius:20px;
+  font-size:11px;
+  font-weight:bold;
+}
+
+
+/* =========================
+   TOTAL BOX
+========================= */
+
+#totalBox{
+  background:#fff;
+  padding:10px;
+  border-radius:10px;
+  border:1px solid #dbe4f0;
+  font-size:14px;
+  text-align:center;
+  font-weight:bold;
+}
+
+
+/* =========================
+   INPUT
+========================= */
+
+input,
+textarea{
+  border-radius:10px !important;
+  font-size:14px !important;
+}
+
+
+/* =========================
+   TECH BOX
+========================= */
+
+.techSelected{
+  border:2px solid #4ade80;
+  background:#ecfdf5;
+}
+
+
+/* =========================
+   DATE INPUT
+========================= */
+
+#fromDate,
+#toDate{
+  max-width:180px;
+}
+
+
+/* =========================
+   FILTER ROW
+========================= */
+
+.filterRow{
+  flex-wrap:nowrap;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:768px){
+
+  .container{
+    padding:5px;
+  }
+
+  .box{
+    padding:10px;
+    border-radius:12px;
+  }
+
+  .topBtns{
+    gap:6px;
+  }
+
+  .topBtns button{
+    font-size:14px !important;
+    padding:10px !important;
+  }
+
+  #homePanel .customTable{
+    min-width:1050px;
+  }
+
+  #homePanel .customTable thead th{
+    font-size:16px;
+    padding:4px 6px;
+  }
+
+  #homePanel .customTable tbody td{
+    font-size:15px;
+    padding:4px 6px;
+  }
+
+  .btn-sm{
+    font-size:10px !important;
+    padding:2px 6px !important;
+  }
+
+  .filterRow{
+    flex-wrap:wrap;
+  }
+
+}
+
+
+/* =========================
+   EXTRA SMALL MOBILE
+========================= */
+
+@media(max-width:480px){
+
+  #homePanel .customTable{
+    min-width:980px;
+  }
+
+  #homePanel .customTable thead th{
+    font-size:15px;
+  }
+
+  #homePanel .customTable tbody td{
+    font-size:14px;
+  }
+
+  .topBtns button{
+    font-size:13px !important;
+  }
+
+}
+
+
+
+.table-responsive{
+  overflow-x:auto;
+  -webkit-overflow-scrolling:touch;
+}
+
+.modal-dialog{
+  max-width:95%;
+}
+
+
+/* BUTTON HOVER EFFECT */
+.topBtns button:hover{
+  transform: scale(1.05);
+  transition: 0.2s;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* LOADER CENTER */
+#loader{
+  display:flex;
+}
+
+
+
+
+#homePanel thead th{
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background: linear-gradient(45deg,#2563eb,#4f46e5);
+}
+
+@xxxmedia (max-width:768px){
+
+  /* #xxtechPanel input,
+  #xxtechPanel textarea{
+    font-size:12px !important;
+  } */
+
+  #techPanel h5{
+    font-size:14px !important;
+  }
+
+  #techPanel p{
+    font-size:14px !important;
+  }
+
+}
+
+@media(max-width:768px){
+  #techPanel input[type="date"]{
+    font-size:11px !important;
+    padding:3px 5px !important;
+  }
+}
+
+
+@media(max-width:768px){
+  #techPanel input[type="date"]{
+    font-size:14px !important;
+    width:50% !important;
+    padding:8px !important;
+  }
+}
+
+</style>
+ 
+
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<body>
+
+
+<!-- LOADER -->
+<div id="loader" style="
+  display:none;
+  position:fixed;
+  top:0; left:0;
+  width:100%; height:100%;
+  background:rgba(0,0,0,0.3);
+  z-index:9999;
+  align-items:center;
+  justify-content:center;
+">
+  <div class="spinner-border text-primary" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+</div>
+
+
+
+
+  <div class="container">
+ 
+
+<div class="topBtns">
+
+
+ 
+
+  <button
+    class="btn btn-primary"
+    onclick="openHome()">
+    Home
+  </button>
+
+  <button
+    class="btn btn-dark"
+    onclick="openMonthlyClosing()">
+    Monthly Closing
+  </button>
+
+
+
+  <button
+    class="btn btn-warning"
+    onclick="openAdmin()">
+    Admin
+  </button>
+
+  <button
+    class="btn btn-success"
+    onclick="openTech()">
+    Technician
+  </button>
+
+</div>
+
+<?!= include("report"); ?>
+
+    <!-- ADMIN PANEL -->
+
+    <div id="adminPanel" class="box" style="display:none;">
+
+      <h3>Create Work Order</h3>
+
+      <input
+type="text"
+id="details"
+class="form-control mb-2"
+placeholder="Name / Mobile / Address">
+
+      <textarea
+id="issue"
+class="form-control mb-2"
+placeholder="Issue">
+</textarea>
+
+      <button
+class="btn btn-primary w-100"
+onclick="saveData()">
+
+Generate Work Order
+
+</button>
+
+      <div id="msg" class="mt-2 fw-bold text-success">
+      </div>
+
+    </div>
+
+
+
+
+
+
+    <!-- HOME -->
+
+
+ <div id="pendingCountBox" style="
+  display:inline-flex;
+  align-items:center;
+  gap:2px;
+  background:#fff3cd;
+  color:#856404;
+  padding:4px 6px;
+  border-radius:20px;
+  font-weight:600;
+   font-size:12px;
+  border:1px solid #ffeeba;
+">
+  ⏳ Pending Wo:
+  <span id="pendingCount" style="
+    background:#dc3545;
+    color:white;
+    width:20px;
+    height:20px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    font-size:13px;
+    font-weight:bold;
+    ">
+    0
+  </span>
+</div>
+
+    <div id="homePanel" class="box">
+
+      <h3>All Work Orders</h3>
+
+
+ <div class="row mb-3 g-2 align-items-center">
+
+  <!-- SEARCH -->
+  <div class="col-8 col-md">
+    <input
+      type="text"
+      id="searchInput"
+      class="form-control"
+      placeholder="Search"
+      onkeyup="loadData()">
+  </div>
+
+  <!-- REFRESH -->
+  <div class="col-4 col-md-auto">
+    <button
+      class="btn btn-primary w-100"
+      onclick="loadData()">
+      Refresh
+    </button>
+  </div>
+
+  <!-- FROM DATE -->
+  <div class="col-4 col-md-auto">
+    <input
+      type="date"
+      id="fromDate"
+      class="form-control"
+      onchange="loadData()">
+  </div>
+
+  <!-- RESET -->
+  <div class="col-4 col-md-auto">
+    <button
+class="btn btn-danger w-100"
+onclick="resetHomeDateFilter()">
+Reset
+</button>
+
+
+
+  </div>
+
+  <!-- TO DATE -->
+  <div class="col-4 col-md-auto">
+    <input
+      type="date"
+      id="toDate"
+      class="form-control"
+      onchange="loadData()">
+  </div>
+
+</div>
+
+
+      <div id="totalBox" class="mb-3 fw-bold text-primary">
+      </div>
+
+
+    <div class="table-responsive" style="max-height:450px; overflow-y:auto;">
+
+        <table class="table customTable">
+
+          <thead>
+
+          <tr>
+
+  <th>WO</th>
+  <th>Status</th>
+  <th>Date</th>
+  <th>Info</th>
+  <th>Issue</th>
+  <th>Solv.Dt</th>
+  <th>Solu.</th>
+
+  <th>Re-Vr.</th>
+  <th>Re-Rm</th>
+  <th>Vr-PY</th>
+  <th>Rm-PY</th>
+  <th>To-Vr</th>
+
+</tr>
+
+          </thead>
+
+          <tbody id="dataTable">
+
+          </tbody>
+
+        </table>
+
+      </div>
+
+    </div>
+
+
+
+
+    <!-- ADMIN LOGIN -->
+
+    <div id="adminLogin" class="box" style="display:none;">
+
+      <h3>Admin Login</h3>
+
+      <input
+type="password"
+id="adminPass"
+class="form-control mb-2"
+placeholder="Password">
+
+      <button
+class="btn btn btn-info w-100"
+onclick="adminLogin()">
+
+Login
+
+</button>
+
+    </div>
+
+
+
+
+
+
+
+
+
+    <!-- TECH LOGIN -->
+
+    <div id="techLogin" class="box" style="display:none;">
+
+      <h3>Technician Login</h3>
+
+      <input
+type="password"
+id="techPass"
+class="form-control mb-2"
+placeholder="Password">
+
+      <button
+class="btn btn-success w-100"
+onclick="techLogin()">
+
+Login
+
+</button>
+
+    </div>
+
+
+
+
+    <!-- TECH PANEL -->
+
+  <div id="techPanel" style="display:none;">
+
+  <!-- SEARCH BOX -->
+  <div class="box mb-2">
+    <input
+      type="text"
+      id="techSearch"
+      class="form-control"
+      placeholder="🔍 Search Work Order / Customer / Issue"
+      onkeyup="filterTech()">
+  </div>
+
+  <div id="techTable"></div>
+
+</div>
+
+
+  </div>
+
+
+
+
+  <!-- POPUP -->
+
+  <div class="modal fade" id="detailModal" tabindex="-1">
+
+    <div class="modal-dialog modal-dialog-centered">
+
+      <div class="modal-content">
+
+        <div class="modal-header">
+
+          <h5 class="modal-title" id="popupTitle">
+
+            Details
+
+          </h5>
+
+          <button
+type="button"
+class="btn-close"
+data-bs-dismiss="modal">
+</button>
+
+        </div>
+
+        <div class="modal-body" id="popupBody">
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+
+
+ <script>
+
+var isAdmin = false;
+
+window.onload = function(){
+  hideAll();
+  document.getElementById("homePanel").style.display = "block";
+
+  loadData();
+
+  loadNumbers();
+};
+
+function loadNumbers(callback){
+  google.script.run.withSuccessHandler(function(res){
+    numbers = res;
+    if(callback) callback(res);
+  }).getNumbers();
+}
+
+
+
+function hideAll(){
+
+  document.getElementById("homePanel")
+    .style.display = "none";
+
+  document.getElementById("adminLogin")
+    .style.display = "none";
+
+  document.getElementById("adminPanel")
+    .style.display = "none";
+
+  document.getElementById("techLogin")
+    .style.display = "none";
+
+  document.getElementById("techPanel")
+    .style.display = "none";
+
+  //   document.getElementById("pageContainerBank")
+  // .style.display = "none";
+
+var bankPage =
+document.getElementById("pageContainerBank");
+
+if(bankPage){
+  bankPage.style.display = "none";
+}
+
+}
+
+
+
+
+
+
+function openMonthlyClosing(){
+
+  hideAll();
+
+  document.getElementById("pageContainerBank")
+    .style.display = "block";
+}
+
+
+
+
+function openHome(){
+
+  isAdmin = false;   // 🔥 हमेशा reset
+
+  hideAll();
+
+  document.getElementById("homePanel")
+    .style.display = "block";
+
+  loadData();
+}
+
+
+
+function openAdmin(){
+
+  hideAll();
+
+  document.getElementById("adminLogin")
+    .style.display = "block";
+}
+
+
+
+function openTech(){
+
+  hideAll();
+
+  document.getElementById("techLogin")
+    .style.display = "block";
+}
+
+
+
+function adminLogin(){
+
+  var pass =
+    document.getElementById("adminPass").value;
+
+  if(pass === "1234"){
+
+    isAdmin = true;
+
+    hideAll();
+
+    document.getElementById("adminPanel")
+      .style.display = "block";
+
+    document.getElementById("homePanel")
+      .style.display = "block";
+
+    loadData();
+
+  }else{
+
+    alert("Wrong Password");
+
+  }
+
+}
+
+
+
+function techLogin(){
+
+  var pass =
+    document.getElementById("techPass").value;
+
+  if(pass == "1234"){
+
+    hideAll();
+
+    document.getElementById("techPanel")
+      .style.display = "block";
+
+    loadData();
+
+  }else{
+
+    alert("Wrong Password");
+  }
+}
+
+
+function saveData(){
+
+  var obj = {
+
+    details:
+    document.getElementById("details").value,
+
+    issue:
+    document.getElementById("issue").value
+  };
+
+  google.script.run
+    .withSuccessHandler(function(res){
+
+      if(res == "blank"){
+
+        document.getElementById("msg")
+          .innerHTML = "Fill All Fields";
+
+        return;
+      }
+
+      document.getElementById("msg")
+        .innerHTML =
+        "👉 Work Order Generated Successfully!: " + res;
+
+        setTimeout(function () {
+  document.getElementById("msg").innerHTML = "";
+}, 10000); // 5000ms = 5 sec
+
+
+      // =========================
+      // WHATSAPP MESSAGE
+      // =========================
+
+     var techNumber = numbers.tech;
+
+      var msg =
+      "🛠 NEW WORK ORDER\n" +
+
+      "WO : " + res + "\n" +
+
+      "Customer : " +
+      obj.details + "\n" +
+
+      "Issue : " +
+      obj.issue;
+
+
+      // WhatsApp Open
+      sendWhatsApp(techNumber, msg);
+
+
+      document.getElementById("details").value = "";
+
+      document.getElementById("issue").value = "";
+
+      loadData();
+
+    })
+    .saveData(obj);
+}
+
+
+
+
+
+function loadData(){
+
+  showLoader();
+
+  google.script.run
+    .withSuccessHandler(function(data){
+
+      var html = "";
+
+      var techHtml = "";
+
+      var totalReceive = 0;
+
+      var totalCompany = 0;
+
+      var totalTech = 0;
+
+      var runningBalance = 0;
+
+        var pendingCount = 0;   // ✅ यहाँ ADD करो
+
+      var search =
+      document.getElementById("searchInput") ?
+      document.getElementById("searchInput").value.toLowerCase()
+      : "";
+
+      var fromDate =
+      document.getElementById("fromDate") ?
+      document.getElementById("fromDate").value : "";
+
+      var toDate =
+      document.getElementById("toDate") ?
+      document.getElementById("toDate").value : "";
+
+      data.shift();
+
+      data.sort(function(a, b) {
+
+        var order = {
+          "Pending": 1,
+          "Closed": 2,
+          "Approved": 3
+        };
+
+        var statusDiff =
+          order[a[1]] - order[b[1]];
+
+        if(statusDiff !== 0){
+          return statusDiff;
+        }
+
+        var dateA = new Date(a[5] || a[2]);
+        var dateB = new Date(b[5] || b[2]);
+
+        return dateB - dateA;
+      });
+
+      for(var i=0; i<data.length; i++){
+
+        var rowText =
+        String(data[i]).toLowerCase();
+
+        if(search &&
+           !rowText.includes(search)){
+          continue;
+        }
+
+        if(fromDate || toDate){
+
+          var rowDate = new Date(data[i][2]);
+
+          var d =
+            rowDate.getFullYear() + "-" +
+            ("0" + (rowDate.getMonth() + 1)).slice(-2) + "-" +
+            ("0" + rowDate.getDate()).slice(-2);
+
+          if(fromDate && d < fromDate) continue;
+          if(toDate && d > toDate) continue;
+        }
+
+        var status = "";
+
+        if(data[i][1] == "Pending"){
+          status = '<span class="statusPending">Pending</span>';
+        }else if(data[i][1] == "Closed"){
+          status = '<span class="statusClosed">Closed</span>';
+        }else{
+          status = '<span class="statusApprove">Approved</span>';
+        }
+
+        var receiveComp = Number(data[i][7] || 0);
+        var receiveTech = Number(data[i][8] || 0);
+        var companyPay = Number(data[i][9] || 0);
+        var techPay = Number(data[i][10] || 0);
+
+        runningBalance = runningBalance + companyPay - receiveComp;
+
+        totalReceive += receiveComp + receiveTech;
+        totalCompany += companyPay;
+        totalTech += techPay;
+
+        html += `
+<tr
+onclick="selectRow(this)"
+ondblclick="openRowPopup(this)">
+
+<td>${data[i][0]}</td>
+<td>${status}</td>
+<td>${formatDate(data[i][2])}</td>
+
+<td ondblclick='showPopup("Customer Details","${data[i][3]}");event.stopPropagation();'>
+
+  ${data[i][3].replace(/\d{10}/, m =>
+    `<a href="tel:${m}" onclick="event.stopPropagation()">📞 ${m}</a>`
+  )}
+</td>
+
+<td ondblclick='showPopup("Issue Details","${data[i][4]}");event.stopPropagation();'>
+  ${data[i][4]}
+</td>
+
+<td>${formatDate(data[i][5] || "")}</td>
+
+<td ondblclick='showPopup("Resolve Details","${data[i][6]}");event.stopPropagation();'>
+  ${data[i][6]}
+</td>
+
+<td>${receiveComp}</td>
+<td>${receiveTech}</td>
+<td>${companyPay}</td>
+<td>${techPay}</td>
+<td>${runningBalance}</td>
+
+</tr>
+`;
+
+        if(data[i][1] == "Closed" && isAdmin){
+
+html += `
+<tr>
+<td colspan="12" class="text-center">
+
+<div style="text-align:left; padding-left:10px;">
+<div style="display:flex; gap:6px; align-items:center; flex-wrap:nowrap; white-space:nowrap; overflow-x:auto;">
+
+  <button
+    class="btn btn-primary btn-sm"
+    style="font-size:11px; padding:1px 8px; border-radius:6px;"
+    onclick="approveWork('${data[i][0]}')">
+    🟢Approve
+  </button>
+
+  <span
+    class="btn btn-secondary btn-sm"
+    style="font-size:11px; padding:1px 8px; border-radius:6px;">
+    ${data[i][0]}
+  </span>
+
+</div>
+</div>
+
+</td>
+</tr>
+`;
+        }
+
+        if(data[i][1] == "Pending"){
+
+  pendingCount++;   // ✅ ADD THIS
+
+
+techHtml += `
+<div class="box"
+onclick="selectTechBox(this); event.stopPropagation();">
+
+<h5>
+  ${data[i][0]}
+  <span class="statusPending">Pending</span>
+${formatDateTime(data[i][2])}
+</h5>
+
+<br>
+
+<p>
+<b>Customer:</b><br>
+
+
+<td>
+  ${data[i][3].replace(/\d{10}/g, m =>
+    `<a href="tel:${m}" onclick="event.stopPropagation()" style="text-decoration:none; color:#2563eb;">
+      📞 ${m}
+    </a>`
+  )}
+</td>
+
+</p>
+
+<p>
+<b>Issue:</b><br>
+${data[i][4]}
+</p>
+
+<div style="margin-bottom:6px;">
+  <div style="font-size:16px; color:#555;">Date</div>
+  <input type="date" id="date${i}" class="form-control form-control-sm">
+</div>
+
+<textarea id="work${i}" class="form-control mb-2" placeholder="Work Details"></textarea>
+
+<input type="number" id="rp${i}" class="form-control mb-2" placeholder="Receive Tech">
+<input type="number" id="rc${i}" class="form-control mb-2" placeholder="Receive Company">
+<input type="number" id="cp${i}" class="form-control mb-2" placeholder="Company Payment">
+<input type="number" id="tp${i}" class="form-control mb-2" placeholder="Tech Payment">
+
+<button class="btn btn-success w-100"
+onclick="updateWork('${data[i][0]}',${i}, decodeURIComponent('${encodeURIComponent(data[i][3])}'))">
+
+Close Work
+
+</button>
+
+</div>
+`;
+        }
+
+      }
+
+      document.getElementById("dataTable").innerHTML = html;
+      document.getElementById("techTable").innerHTML = techHtml;
+
+      var toVText = "";
+      var toVColor = "";
+
+      if(runningBalance > 0){
+        toVColor = "red";
+        toVText = "वर्धमान जी को देना";
+      }else if(runningBalance < 0){
+        toVColor = "green";
+        toVText = "वर्धमान जी से लेना";
+      }else{
+        toVColor = "black";
+        toVText = "Balance Clear";
+      }
+
+      document.getElementById("totalBox").innerHTML =
+        "Receive : " + totalReceive +
+        " | Company : " + totalCompany +
+        " | Tech : " + totalTech +
+        ' | TO-V : <span style="color:' + toVColor + '; font-weight:bold;">' +
+        runningBalance +
+        ' (' + toVText + ')</span>';
+
+
+        // ✅ ADD THIS HERE (IMPORTANT)
+document.getElementById("pendingCount").innerText = pendingCount;
+
+      hideLoader();   // ✅ SUCCESS END
+
+    })
+
+
+
+    .withFailureHandler(function(error){
+
+      hideLoader();   // ✅ ERROR END
+      alert("Error loading data");
+      console.log(error);
+
+    })
+
+    .getData();
+}
+
+
+// TABLE ke liye
+function formatDate(dateValue){
+
+  if(!dateValue) return "";
+
+  var d = new Date(dateValue);
+
+  if(isNaN(d)) return "";
+
+  var day = ("0" + d.getDate()).slice(-2);
+  var month = ("0" + (d.getMonth() + 1)).slice(-2);
+  var year = d.getFullYear();
+
+  return day + "-" + month + "-" + year;
+}
+
+
+// TECH PANEL ke liye
+function formatDateTime(dateValue){
+
+  if(!dateValue) return "";
+
+  var d = new Date(dateValue);
+
+  if(isNaN(d)) return "";
+
+  var day = ("0" + d.getDate()).slice(-2);
+  var month = ("0" + (d.getMonth() + 1)).slice(-2);
+  var year = d.getFullYear();
+
+  var hours = ("0" + d.getHours()).slice(-2);
+  var minutes = ("0" + d.getMinutes()).slice(-2);
+
+  return day + "-" + month + "-" + year + " " + hours + ":" + minutes;
+}
+
+
+
+function updateWork(workorder, i, customer){
+
+// RECEIVE COMPANY
+var receiveCompany =
+  Number(document.getElementById("rc"+i).value || 0);
+
+// RECEIVE TECH
+var receiveTech =
+  Number(document.getElementById("rp"+i).value || 0);
+
+// COMPANY PAYMENT
+var company =
+  Number(document.getElementById("cp"+i).value || 0);
+
+// TECH PAYMENT
+var tech =
+  Number(document.getElementById("tp"+i).value || 0);
+
+// TOTAL PAYMENT
+var totalPayment = company + tech;
+
+
+// ============================
+// VALIDATION
+// ============================
+
+// दोनों साथ में fill नहीं होने चाहिए
+if(receiveCompany > 0 && receiveTech > 0){
+
+  alert(
+    "Receive Company OR Receive Tech में से केवल एक ही भरें"
+  );
+
+  return;
+} 
+
+
+// // दोनों खाली भी नहीं होने चाहिए
+// if(receiveCompany == 0 && receiveTech == 0){
+
+//   alert(
+//     "Receive Company या Receive Tech में amount भरना जरूरी है"
+//   );
+  
+
+//   return;
+// }
+
+
+// RECEIVE COMPANY CHECK
+if(receiveCompany > 0 &&
+   totalPayment != receiveCompany){
+
+  alert(
+    "Company Payment + Tech Payment = Receive Company होना जरूरी है"
+  );
+
+  return;
+}
+
+
+// RECEIVE TECH CHECK
+if(receiveTech > 0 &&
+   totalPayment != receiveTech){
+
+  alert(
+    "Company Payment + Tech Payment = Receive Tech होना जरूरी है"
+  );
+
+  return;
+}
+
+
+var obj = {
+
+  workorder: workorder,
+
+  resolveDate:
+  document.getElementById("date"+i).value,
+
+  workDetails:
+  document.getElementById("work"+i).value,
+
+  receiveCompany: receiveCompany,
+
+  receiveTech: receiveTech,
+
+  companyPayment: company,
+
+  techPayment: tech
+
+};
+
+
+// ============================
+// SAVE + WHATSAPP
+// ============================
+
+google.script.run
+  .withSuccessHandler(function(){
+
+    alert("Work Closed");
+
+    // =========================
+    // ADMIN WHATSAPP
+    // =========================
+
+    var adminNumber = numbers.admin;
+
+    var closeMsg =
+
+    "✅ WORK CLOSED\n" +
+
+    "WO : " + workorder + "\n" +
+
+    
+
+    "Customer : " + customer + "\n" +
+
+    "Resolve Date : " +
+    document.getElementById("date"+i).value + "\n" +
+
+    "Work : " +
+    document.getElementById("work"+i).value + "\n" +
+
+    "Receive Company : " +
+    receiveCompany + "\n" +
+
+    "Receive Tech : " +
+    receiveTech + "\n" +
+
+    "Company Payment : " +
+    company + "\n" +
+
+    "Tech Payment : " +
+    tech;
+
+
+    // WhatsApp Open
+    sendWhatsApp(adminNumber, closeMsg);
+
+    loadData();
+
+  })
+  .updateWork(obj);
+
+}
+
+
+function sendWhatsApp(number, message){
+
+  var url =
+    "https://wa.me/" +
+    number +
+    "?text=" +
+    encodeURIComponent(message);
+
+  window.open(url, "_blank");
+}
+
+
+
+
+function approveWork(wo){
+
+  google.script.run
+    .withSuccessHandler(function(){
+
+      loadData();
+
+    })
+    .approveWork(wo);
+}
+
+function selectRow(row){
+
+  document.querySelectorAll(".customTable tbody tr")
+    .forEach(r => r.classList.remove("selectedRow"));
+
+  row.classList.add("selectedRow");
+}
+
+
+function openRowPopup(row){
+
+  var cells = row.querySelectorAll("td");
+
+  var html = `
+
+    <table class="table table-bordered">
+
+      <tr>
+        <th>WO</th>
+        <td>${cells[0].innerText}</td>
+      </tr>
+
+      <tr>
+        <th>Status</th>
+        <td>${cells[1].innerText}</td>
+      </tr>
+
+      <tr>
+        <th>Date</th>
+        <td>${cells[2].innerText}</td>
+      </tr>
+
+      <tr>
+        <th>Details</th>
+        <td>${cells[3].innerHTML}</td>
+      </tr>
+
+      <tr>
+        <th>Issue</th>
+        <td>${cells[4].innerText}</td>
+      </tr>
+
+      <tr>
+        <th>Resolve Date</th>
+        <td>${cells[5].innerText}</td>
+      </tr>
+
+      <tr>
+        <th>Resolve Detail</th>
+        <td>${cells[6].innerText}</td>
+      </tr>
+
+      <tr>
+        <th>Rece. Comp.</th>
+        <td>${cells[7].innerText}</td>
+      </tr>
+
+      <tr>
+        <th>ReceiveTech</th>
+        <td>${cells[8].innerText}</td>
+      </tr>
+
+      <tr>
+        <th>Company</th>
+        <td>${cells[9].innerText}</td>
+      </tr>
+
+      <tr>
+        <th>Tech</th>
+        <td>${cells[10].innerText}</td>
+      </tr>
+
+      <tr>
+        <th>TO-V</th>
+        <td>${cells[11].innerText}</td>
+      </tr>
+
+    </table>
+
+  `;
+
+  document.getElementById("popupTitle").innerHTML =
+    "Work Order Details";
+
+  document.getElementById("popupBody").innerHTML =
+    html;
+
+  var modal = new bootstrap.Modal(
+    document.getElementById("detailModal")
+  );
+
+  modal.show();
+}
+
+
+
+
+
+
+function showPopup(title, text){
+
+  // 10 digit number ko clickable banana
+  text = text.replace(/\d{10}/g, function(m){
+    return `<a href="tel:${m}" style="color:#2563eb; font-weight:bold; text-decoration:none;">
+              📞 ${m}
+            </a>`;
+  });
+
+  document.getElementById("popupTitle").innerHTML = title;
+  document.getElementById("popupBody").innerHTML = text;
+
+  var modal = new bootstrap.Modal(
+    document.getElementById("detailModal")
+  );
+
+  modal.show();
+}
+
+
+
+function selectTechBox(el){
+  document.querySelectorAll(".box").forEach(b=>{
+    b.classList.remove("techSelected");
+  });
+  el.classList.add("techSelected");
+}
+
+function resetHomeDateFilter(){
+
+  document.getElementById("fromDate").value = "";
+
+  document.getElementById("toDate").value = "";
+
+  loadData();
+}
+
+
+ function showLoader(){
+  document.getElementById("loader").style.display = "flex";
+}
+
+function hideLoader(){
+  document.getElementById("loader").style.display = "none";
+}
+
+function filterTech(){
+
+  var search = document.getElementById("techSearch").value.toLowerCase();
+  var boxes = document.querySelectorAll("#techTable .box");
+
+  boxes.forEach(function(box){
+
+    var text = box.innerText.toLowerCase();
+
+    if(text.includes(search)){
+      box.style.display = "block";
+    }else{
+      box.style.display = "none";
+    }
+
+  });
+}
+
+
+
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+ </html>    
+<!-- ALL OK WHATS AOO APPROVE WORK CLOSE V WO GENARATED    MOBIL NO G SHEET DUE   -->
+
+
